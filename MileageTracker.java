@@ -21,7 +21,8 @@ public class MileageTracker
      * best practice is not to immediately initialize instance variables
      */
     private double milesDriven; //in units of miles
-
+    private double fuelInTank; //in units of gallons
+    private String vin; //vehicle identification
 
 
 
@@ -51,8 +52,24 @@ public class MileageTracker
      * the parameters and their types (e.g. miles of type double)
      */
     
+    /**
+     * Default constructor for the Car class.
+     * Initializes this car's fuel efficiency to 30 mpg, the fuel in the tank to
+     * zero gallons, and the vin to null.
+     */
     
+    public MileageTracker(){
+        
+    }
+    /**
+     * Constructs a new Car object with the specified fuel efficiency
+     * 
+     * @param initialFuelEfficiency
+     */
     
+    public MileageTracker(double initialFuelEfficiency){
+        
+    }
     
     
     
