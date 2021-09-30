@@ -100,11 +100,9 @@ public class MileageTracker
      * 
      * @return the current mileage, in miles per gallon
      */
-    public double getMileage()
+    public double getMilesDriven()
     {
-        //double mileage = this.fuelConsumed / this.milesDriven;
-        //return mileage;
-        return 0.0;
+        return milesDriven;
     }
     
     /**
@@ -114,8 +112,8 @@ public class MileageTracker
      */
     public String getVIN()
     {
-        //return this.vin;
-        return "d";
+        
+        return this.vin;
     }
     
     /**
@@ -126,6 +124,14 @@ public class MileageTracker
     public void setVIN(String vin)
     {
         //vin = vin;
+    }
+    public static void main(String[] args){
+        MileageTracker tracker = new MileageTracker();
+        System.out.println(tracker);
+    }
+    public String toString(){
+
+        return "";
     }
 }
 
