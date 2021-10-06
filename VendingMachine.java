@@ -35,16 +35,36 @@ public class VendingMachine
     public void setTokens(int tokens){
         this.tokens = tokens;
     }
+    /**
+     * Increase the amount of cans the vending machine has
+     * 
+     * @param cans    the amount of cans added to the vending machine
+     */
     public void fillUp(int cans){
         this.cans += cans;
     }
+    /**
+     * insert a token into the vending machine
+     * 
+     * @param tokens    the amount of tokens inserted into the vending machine
+     */
     public void insertToken(int tokens){
         this.tokens += tokens;
         this.cans -= cans;
     }
+    /**
+     * Returns the amount of cans in the vending machine
+     * 
+     * @return the amount of cans in the vending machine
+     */
     public int getCanCount(){
         return cans;
     }
+    /**
+     * Returns the amount of tokens in the vending machine
+     * 
+     * @return the amount of tokens in the vending machine
+     */
     public int getTokenCount(){
         return tokens;
     }

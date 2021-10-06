@@ -14,7 +14,10 @@ public class CaesarCipher
     
     private String keyphrase;
     
-    
+    public CaesarCipher(String initialKeyphrase){
+        //prepare the keyphrase by removing duplicate letters
+        this.compressKeyphrase(initialKeyphrase);
+    }
     
     
     
