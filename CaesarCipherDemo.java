@@ -49,7 +49,7 @@ public class CaesarCipherDemo
          */
         String keyphrase = s.next();
         keyphrase = keyphrase.toUpperCase();
-        CaesarCipher cipher = newCaesarCipher(keyphrase);
+        CaesarCipher cipher = new CaesarCipher(keyphrase);
         System.out.println("Enter the number of seconds to test a guessed keyphrase");
         /*
          * The nextInt method attempts to convert the next token in the stream to
@@ -58,5 +58,11 @@ public class CaesarCipherDemo
          *  
          * The nextDouble method behaves in the same way for doubles.
          */
+        int secondsPerGuess = s.nextInt();
+        String complexityDesc = cipher.getComplexityDescription(secondsPerGuess);
+        System.out.println("Complexity: " + complexityDesc);
+        
+        String encryptedTest = cipher.encrypt(text);
+        
     }
 }
