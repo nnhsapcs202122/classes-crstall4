@@ -13,12 +13,15 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    
+    Vehicle car1;
     
     
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
+    public CityscapeComponent(){
+        this.car1 = new Vehicle(0, 0);
     
+    }
     
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
@@ -31,7 +34,7 @@ public class CityscapeComponent extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
-        
+        car1.draw(g2);
         // invoke the draw method on each object in your Cityscape
         // ...
         
@@ -47,7 +50,7 @@ public class CityscapeComponent extends JComponent
     {
         // update the objects in the cityscape so they are animated
         // ...
-        
+        car1.moveRight();
         
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method
